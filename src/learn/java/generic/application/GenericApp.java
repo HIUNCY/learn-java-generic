@@ -19,5 +19,11 @@ public class GenericApp {
         Integer[] numbers = {1,2,3,4,5,};
         System.out.println(ArrayHelper.count(names));
         System.out.println(ArrayHelper.count(numbers));
+
+        // ===== Invariant =====
+        MyData<String> dataString = new MyData<>("Zainul");
+        // MyData<Object> dataObject = dataString; ERROR
+        MyData<Object> data = new MyData<>(100);
+        // MyData<Integer> dataInteger = data; ERROR
     }
 }
